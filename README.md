@@ -2,7 +2,12 @@
 
 This repository contains the Dockerfile and supporting files to create docker image which will run kafka and zookeeper in a single container. This can be really useful for development or experimentation. Don't try to use this for any production workloads. This configuration is not secure, resilient, or optimized for large message load (typical reasons why kafka is chosen).
 
-The docker images built from this repository will be published to dockerhub at [https://hub.docker.com/r/maliksalman/kafka-dev](https://hub.docker.com/r/maliksalman/kafka-dev) and should be tagged matching [apache kafka](https://kafka.apache.org/downloads) release versions.
+The docker images built from this repository will be published to dockerhub at [https://hub.docker.com/r/maliksalman/kafka-dev](https://hub.docker.com/r/maliksalman/kafka-dev) and should be tagged matching [apache kafka](https://kafka.apache.org/downloads) release versions. The following versions of the images exist:
+
+| Docker Image | Kafka Release |
+| :------------| :------------ |
+|  `maliksalman/kafka-dev:latest` | `1.0.0` |
+|  `maliksalman/kafka-dev:1.0.0` | `1.0.0` |
 
 ## Running the container
 
