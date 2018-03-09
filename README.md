@@ -14,7 +14,7 @@ The docker images built from this repository will be published to dockerhub at [
 To run a single broker kafka cluster, run the following docker command:
 
 ```
-docker run -d \
+docker run -d --rm --name kafka \
 	-e ADVERTISED_HOST={YOUR_DOCKER_HOSTNAME_GOES_HERE} \
 	-p 2181:2181 -p 9092:9092 \
 	maliksalman/kafka-dev
