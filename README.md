@@ -6,7 +6,8 @@ The docker images built from this repository will be published to dockerhub at [
 
 | Docker Image | Kafka Release |
 | :------------| :------------ |
-|  `maliksalman/kafka-dev:latest` | `1.1.0` |
+|  `maliksalman/kafka-dev:latest` | `2.4.1` |
+|  `maliksalman/kafka-dev:2.4.1` | `2.4.1` |
 |  `maliksalman/kafka-dev:1.1.0` | `1.1.0` |
 |  `maliksalman/kafka-dev:1.0.0` | `1.0.0` |
 
