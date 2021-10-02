@@ -4,12 +4,13 @@ This repository contains the Dockerfile and supporting files to create docker im
 
 The docker images built from this repository will be published to dockerhub at [https://hub.docker.com/r/maliksalman/kafka-dev](https://hub.docker.com/r/maliksalman/kafka-dev) and should be tagged matching [apache kafka](https://kafka.apache.org/downloads) release versions. The following versions of the images exist:
 
-| Docker Image | Kafka Release |
-| :------------| :------------ |
-|  `maliksalman/kafka-dev:latest` | `2.4.1` |
-|  `maliksalman/kafka-dev:2.4.1` | `2.4.1` |
-|  `maliksalman/kafka-dev:1.1.0` | `1.1.0` |
-|  `maliksalman/kafka-dev:1.0.0` | `1.0.0` |
+| Docker Image | JDK | Kafka Release |
+| :------------| :--: | :------------ |
+|  `maliksalman/kafka-dev:latest` | `11` | `3.0.0` |
+|  `maliksalman/kafka-dev:3.0.0` | `11` | `3.0.0` |
+|  `maliksalman/kafka-dev:2.4.1` | `8` | `2.4.1` |
+|  `maliksalman/kafka-dev:1.1.0` | `8` | `1.1.0` |
+|  `maliksalman/kafka-dev:1.0.0` | `8` | `1.0.0` |
 
 ## Running the container
 
