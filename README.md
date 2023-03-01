@@ -4,14 +4,15 @@ This repository contains the Dockerfile and supporting files to create docker im
 
 The docker images built from this repository will be published to dockerhub at [https://hub.docker.com/r/maliksalman/kafka-dev](https://hub.docker.com/r/maliksalman/kafka-dev) and should be tagged matching [apache kafka](https://kafka.apache.org/downloads) release versions. The following versions of the images exist:
 
-| Docker Image | JDK | Kafka Release | Includes Kafka-UI |
-| :------------| :--: | :------------ | :--: |
-|  `maliksalman/kafka-dev:latest` | `17` | `3.2.0` | Yes |
-|  `maliksalman/kafka-dev:3.2.0` | `17` | `3.2.0` | Yes |
-|  `maliksalman/kafka-dev:3.0.0` | `11` | `3.0.0` | No |
-|  `maliksalman/kafka-dev:2.4.1` | `8` | `2.4.1` | No |
-|  `maliksalman/kafka-dev:1.1.0` | `8` | `1.1.0` | No |
-|  `maliksalman/kafka-dev:1.0.0` | `8` | `1.0.0` | No |
+| Docker Image | JDK | Kafka Release | Includes Kafka-UI | Architecture |
+| :------------| :--: | :------------ | :--: | :--: |
+|  `maliksalman/kafka-dev:latest` | `17` | `3.4.0` | Yes | `amd64`, `arm64` |
+|  `maliksalman/kafka-dev:3.4.0` | `17` | `3.4.0` | Yes | `amd64`, `arm64` |
+|  `maliksalman/kafka-dev:3.2.0` | `17` | `3.2.0` | Yes | `amd64` |
+|  `maliksalman/kafka-dev:3.0.0` | `11` | `3.0.0` | No | `amd64` |
+|  `maliksalman/kafka-dev:2.4.1` | `8` | `2.4.1` | No | `amd64` |
+|  `maliksalman/kafka-dev:1.1.0` | `8` | `1.1.0` | No | `amd64` |
+|  `maliksalman/kafka-dev:1.0.0` | `8` | `1.0.0` | No | `amd64` |
 
 ## Running the container
 
