@@ -6,7 +6,8 @@ The docker images built from this repository will be published to dockerhub at [
 
 | Docker Image | JDK | Kafka Release | Includes Kafka-UI | Architecture |
 | :------------| :--: | :------------ | :--: | :--: |
-|  `maliksalman/kafka-dev:latest` | `17` | `3.4.0` | Yes | `amd64`, `arm64` |
+|  `maliksalman/kafka-dev:latest` | `21` | `3.7.0` | Yes | `amd64`, `arm64` |
+|  `maliksalman/kafka-dev:3.7.0` | `21` | `3.7.0` | Yes | `amd64`, `arm64` |
 |  `maliksalman/kafka-dev:3.4.0` | `17` | `3.4.0` | Yes | `amd64`, `arm64` |
 |  `maliksalman/kafka-dev:3.2.0` | `17` | `3.2.0` | Yes | `amd64` |
 |  `maliksalman/kafka-dev:3.0.0` | `11` | `3.0.0` | No | `amd64` |
@@ -16,15 +17,15 @@ The docker images built from this repository will be published to dockerhub at [
 
 ## Running the container
 
-To run a single broker kafka cluster, run the following docker command:
+To run a single broker kafka cluster, run the following docker command (works on `sh`, `bash`, `zsh`, etc):
 
 ```
-export KAFKA_DOCKER_HOST=__YOUR_DOCKER_HOSTNAME_GOES_HERE__
-docker run -d --rm --name kafka \
-	-e ADVERTISED_HOST=${KAFKA_DOCKER_HOST} \
+docker run -d --rm --name kafka-dev \
+	-e ADVERTISED_HOST=${HOSTNAME} \
 	-e ENABLE_KAFKA_UI=true \
+	--add-host=${HOSTNAME}:127.0.0.1 \
 	-p 2181:2181 -p 9092:9092 -p 8080:8080 \
 	maliksalman/kafka-dev:3.2.0
 ```
 
-The above command will expose port `2181` as standard port for zookeeper, port `9092` where kafka broker will be listeneing, and port `8080` where kafka-ui (avilable since `3.2.0`) will be running. It is also important to note the need to set the `ADVERTISED_HOST` environment variable to your docker host's hostname otherwise the app connecting to zookeeper will not be given the correct address to the kafka broker.
+The above command will expose port `2181` as standard port for zookeeper, port `9092` where kafka broker will be listening, and port `8080` where kafka-ui (available since `3.2.0`) will be running. The command depends on `${HOSTNAME}` resolving properly, if running on an environment where that won't resolve to your docker host computer's name, then replace that with the hostname of where the docker host is running.
